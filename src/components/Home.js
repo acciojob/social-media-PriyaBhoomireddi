@@ -1,23 +1,21 @@
-import React, { useState } from 'react';
+// src/components/Home.js
+
+import React from 'react';
+import { Link } from 'react-router-dom'; // Ensure this import is present
 
 function Home() {
-  const [posts, setPosts] = useState([
-    { id: 1, author: 'John Doe', content: 'My first post!' },
-    { id: 2, author: 'Jane Smith', content: 'React is awesome!' },
-  ]);
-
   return (
     <div>
-      <h1>Posts</h1>
-      <div className="posts-list">
-        {posts.map((post) => (
-          <div key={post.id} className="post">
-            <h3>{post.author}</h3>
-            <p>{post.content}</p>
-            <Link to={`/posts/${post.id}`}>View Post</Link>
-          </div>
-        ))}
-      </div>
+      <h1>Shopping Cart</h1>
+      <nav>
+        <ul>
+          <li><Link to="/">Home</Link></li>
+          <li><Link to="/users">Users</Link></li>
+          <li><Link to="/notifications">Notifications</Link></li>
+          <li><Link to="/create-post">Create Post</Link></li>
+        </ul>
+      </nav>
+      {/* Other components or elements */}
     </div>
   );
 }
